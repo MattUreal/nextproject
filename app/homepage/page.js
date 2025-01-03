@@ -21,44 +21,37 @@ export default function HomePage() {
         and enhance all aspects of human resource management.
         </p>
         {/* Key Features */}
-        <section>
+        <section >
         <h2 className="text-2xl font-semibold mb-4">Key Features</h2>
-          <ol className="space-y-4">
-            
-              <li className="border p-4 rounded shadow">
-                <h3 className="text-xl font-bold">Employee Self-Service:</h3>
-                
-                <p className="mt-2"> Employees can access and update their personal information, view pay stubs, request time off, and enroll in benefits.
-                </p>
-              </li>
-              <li className="border p-4 rounded shadow">
-                <h3 className="text-xl font-bold">Recruitment & Onboarding: </h3>
-                
-                <p className="mt-2"> Streamline the hiring process from job postings to onboarding with automated workflows and applicant tracking.</p>
-              </li>
-              <li className="border p-4 rounded shadow">
-                <h3 className="text-xl font-bold">Performance Management: </h3>
-                
-                <p className="mt-2">Set goals, conduct performance reviews, and track employee development with ease.</p>
-              </li>
-              <li className="border p-4 rounded shadow">
-                <h3 className="text-xl font-bold">Payroll & Benefits:</h3>
-                
-                <p className="mt-2"> Process payroll accurately and efficiently, manage employee benefits, and ensure compliance with all relevant regulations.</p>
-              </li>
-              <li className="border p-4 rounded shadow">
-                <h3 className="text-xl font-bold">Time & Attendance:</h3>
-                
-                <p className="mt-2"> Track employee time and attendance, manage leave requests, and generate accurate reports.
-                </p>
-              </li>
-              <li className="border p-4 rounded shadow">
-                <h3 className="text-xl font-bold">Reporting & Analytics:</h3>
-                
-                <p className="mt-2"> Gain valuable insights into your workforce with customizable reports and dashboards.</p>
-              </li>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
+  <div className="border p-4 rounded shadow">
+    <h3 className="text-xl font-bold">Employee Self-Service:</h3>
+    <p className="mt-2"> Employees can access and update their personal information, view pay stubs, request time off, and enroll in benefits.
+    </p>
+  </div>
+  <div className="border p-4 rounded shadow">
+    <h3 className="text-xl font-bold">Recruitment & Onboarding: </h3>
+    <p className="mt-2"> Streamline the hiring process from job postings to onboarding with automated workflows and applicant tracking.</p>
+  </div>
+  <div className="border p-4 rounded shadow">
+    <h3 className="text-xl font-bold">Performance Management: </h3>
+    <p className="mt-2"> Set goals, conduct performance reviews, and track employee development with ease.</p>
+  </div>
+  <div className="border p-4 rounded shadow">
+    <h3 className="text-xl font-bold">Payroll & Benefits:</h3>
+    <p className="mt-2"> Process payroll accurately and efficiently, manage employee benefits, and ensure compliance with all relevant regulations.</p>
+  </div>
+  <div className="border p-4 rounded shadow">
+    <h3 className="text-xl font-bold">Time & Attendance:</h3>
+    <p className="mt-2"> Track employee time and attendance, manage leave requests, and generate accurate reports.
+    </p>
+  </div>
+  <div className="border p-4 rounded shadow">
+    <h3 className="text-xl font-bold">Reporting & Analytics:</h3>
+    <p className="mt-2"> Gain valuable insights into your workforce with customizable reports and dashboards.</p>
+  </div>
+</div>
           
-          </ol>
         </section>
 
        
@@ -67,7 +60,7 @@ export default function HomePage() {
       <div className=" py-24 sm:py-32">
   <div className="mx-auto grid max-w-7xl gap-20 px-6 lg:px-8 xl:grid-cols-3">
     <div className="max-w-xl">
-      <h2 className="text-pretty text-3xl font-semibold tracking-tight  sm:text-4xl">Meet our leadership</h2>
+      <h2 className="text-pretty text-3xl font-semibold tracking-tight  sm:text-4xl">Meet our Team</h2>
       <p className="mt-6 text-lg/8 text-gray-600">We’re a dynamic group of individuals who are passionate about what we do and dedicated to delivering the best results for our clients.</p>
     </div>
     <ul role="list" className="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2">
