@@ -5,13 +5,12 @@ import Footer from "../components/Footer";
 
 export default function About() {
   return (
-    <div className='absolute w-full'>
+    <div className='absolute w-full '>
       {/* Navigation Bar */}
       <Navbar />
 
       {/* Main Content */}
-<<<<<<< HEAD
-      <main className="p-8 text-center">
+      <main className="mt-36 p-8 text-center">
         <section className="ml:mx-48 md:mx-28 sm:mx-12">
           <h1 className="text-3xl font-bold mb-4">About Us</h1>
           <p className="text-lg mb-6">
@@ -60,13 +59,6 @@ export default function About() {
             while providing candidates with meaningful career opportunities.
           </p>
         </section>
-=======
-      <main className="mt-36 p-8 text-center">
-        <h1 className="text-3xl font-bold mb-4">Welcome to the HRM System</h1>
-        <p className="text-lg mb-6">
-          Post jobs and allow applicants to apply seamlessly. Simplify your hiring process with our platform.
-        </p>
->>>>>>> 125666bae46d0eb1eaa8b8750740b28c5fa835e9
       </main>
 
       {/* Footer */}
