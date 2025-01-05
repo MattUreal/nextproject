@@ -4,8 +4,12 @@ import Navbar from '../components/Navbar'
 
 const Contact = () => {
   return (
-    <div><Navbar/>
-        <Footer/>
+    <div className='absolute '><Navbar/>
+      <div className='mt-36 w-full'>
+        
+        
+      </div>
+      <Footer/>
     </div>
   )
 }

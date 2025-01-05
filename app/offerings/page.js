@@ -17,10 +17,10 @@ const Offerings = () => {
 
       ];
   return (
-    <div >
+    <div className='absolute w-full' >
          {/* Navigation Bar */}
       <Navbar />
-      <div className="p-8 text-center">
+      <div className="mt-36 p-8 text-center">
          {/* List of Jobs */}
           <section className="mt-4">
           <h2 className="text-2xl font-semibold mb-4">Available Jobs</h2>

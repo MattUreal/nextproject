@@ -39,7 +39,7 @@ const Navbar =()=>{
   const isActive = (path) => router.pathname === path;
 
     return (
-      <nav className="  text-black border-b-1 border-cyan-50 p-4 rounded shadow dark:text-gray-50">
+      <nav className=" fixed w-full  text-black border-b-1 dark:bg-background bg-white border-cyan-50 p-4 rounded shadow dark:text-gray-50">
       <div className=" mx-auto items-center px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between p-4">
           <div className="flex items-center">
