@@ -1,5 +1,7 @@
+import Head from 'next/head';
 import localFont from "next/font/local";
 import "./globals.css";
+import { icons } from 'lucide-react';
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -15,6 +17,18 @@ const geistMono = localFont({
 export const metadata = {
   title: "HRM System",
   description: "Job Postings and Application",
+ icons:{
+  icon: [
+    '/favicon.ico?v=4',
+  ],
+  apple: [
+    '/apple-touch-icon.png?v=4',
+  ],
+  shortcut: [
+    '/apple-touch-icon.png',
+  ],
+},
+ menifest: '/site.webmaifest'
 };
 
 export default function RootLayout({ children }) {
