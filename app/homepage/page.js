@@ -7,13 +7,16 @@ export default function HomePage() {
   
 
   return (
-    <div>
+    <div className='absolute'>
       {/* Navigation Bar */}
       <Navbar />
       
 
       {/* Main Content */}
-      <main className="p-8 text-center">
+      <main className="mt-36 p-8 text-center">
+        
+       
+        <section >
         <h1 className="text-3xl font-bold mb-4">Welcome to the HRM System</h1>
         <p className="text-lg mb-6">
         This user-friendly platform provides 
@@ -21,7 +24,6 @@ export default function HomePage() {
         and enhance all aspects of human resource management.
         </p>
         {/* Key Features */}
-        <section >
         <h2 className="text-2xl font-semibold mb-4">Key Features</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
   <div className="border p-4 rounded shadow">
@@ -54,10 +56,8 @@ export default function HomePage() {
           
         </section>
 
-       
-      </main>
-
-      <div className=" py-24 sm:py-32">
+       <section>
+       <div className=" py-24 sm:py-32">
   <div className="mx-auto grid max-w-7xl gap-20 px-6 lg:px-8 xl:grid-cols-3">
     <div className="max-w-xl">
       <h2 className="text-pretty text-3xl font-semibold tracking-tight  sm:text-4xl">Meet our Team</h2>
@@ -102,6 +102,10 @@ export default function HomePage() {
     </ul>
   </div>
 </div>
+       </section>
+      </main>
+
+      
 
       {/* Footer */}
       <Footer/>
