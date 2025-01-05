@@ -89,7 +89,7 @@ const Navbar =()=>{
               )}
             </button>
           </div>
-          <div className="hidden md:flex md:items-center md:space-x-8">
+          <div className="hidden md:flex md:items-center md:space-x-4">
             <Link href="/">
               <h2 className={`hover:text-white hover:bg-black hover:rounded-xl dark:hover:bg-white dark:hover:text-black p-4 ${isActive('/about') ? 'bg-green-700 dark:bg-gray-600'  : ''}`}>Home</h2>
             </Link>
