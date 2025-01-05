@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import localFont from "next/font/local";
 import "./globals.css";
 
@@ -15,6 +16,13 @@ const geistMono = localFont({
 export const metadata = {
   title: "HRM System",
   description: "Job Postings and Application",
+  openGraph: {
+    images: [
+      {
+        url: '/hrm-logo.jpg', 
+      },
+    ],
+  },
 };
 
 export default function RootLayout({ children }) {
