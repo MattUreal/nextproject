@@ -1,16 +1,17 @@
 import React from "react";
 import Link from "next/link";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+
 
 export default function About() {
   return (
     <div className='absolute w-full '>
       {/* Navigation Bar */}
-      <Navbar />
+      <Navbar/>
 
       {/* Main Content */}
-      <main className="mt-40 p-8 text-center">
+      <main className="mt-36 p-8 text-center">
         <section className="ml:mx-48 md:mx-28 sm:mx-12 m-3 border p-4 rounded shadow">
           <h1 className="text-3xl font-bold mb-4">About</h1>
           <p className="text-lg mb-6">
@@ -62,7 +63,7 @@ export default function About() {
       </main>
 
       {/* Footer */}
-      <Footer />
+      <Footer/>
     </div>
   );
 }

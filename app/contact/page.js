@@ -1,16 +1,18 @@
 "use client"
 
+import ContactForm from '@/components/contactForm'
+import Footer from '@/components/Footer'
+import Navbar from '@/components/Navbar'
 import React from 'react'
-import Footer from '../components/Footer'
-import Navbar from '../components/Navbar'
-import ContactForm from '../components/contactForm'
+
 
 const Contact = () => {
   return (
-    <div className='absolute '><Navbar/>
-      <div className='mt-40 w-full flex items-center'>
+    <div className='absolute w-full '>
+      <Navbar/>
+      <div className='m-4  flex items-center justify-center'>
         {/* <ContactForm/> */}
-        
+        <ContactForm/>
         
       </div>
       <Footer/>

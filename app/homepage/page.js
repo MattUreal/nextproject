@@ -1,9 +1,10 @@
 import React from "react";
 import Link from "next/link";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+
 import { Button } from "@/components/ui/button";
 import { StickyNote, Upload } from "lucide-react";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 export default function HomePage() {
   const teams =[
@@ -15,7 +16,7 @@ export default function HomePage() {
   return (
     <div className="absolute w-full">
       {/* Navigation Bar */}
-      <Navbar />
+      <Navbar/>
 
       {/* Main Content */}
       <main className="mt-40 p-8 text-center">
@@ -170,7 +171,7 @@ export default function HomePage() {
       
 
       {/* Footer */}
-      <Footer />
+      <Footer/>
     </div>
   );
 }
