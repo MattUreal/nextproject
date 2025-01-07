@@ -6,7 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 
-import { Button } from "@/components/ui/button";
+import { Button } from "./ui/button";
 import { CircleUserRound, Upload, Sun, Moon } from "lucide-react";
 
 const Navbar = () => {
@@ -37,7 +37,7 @@ const Navbar = () => {
     { path: "/contact", label: "Contact" },
   ];
 
-  const isActive = (path) => router.pathname === path;
+  
 
   return (
     <nav className=" fixed w-full  text-black border-b-1 dark:bg-background bg-white border-cyan-50 p-4 rounded shadow dark:text-gray-50">
@@ -46,7 +46,7 @@ const Navbar = () => {
           <div className="flex items-center">
             <Link href="/homepage">
               <Image
-                className="lg:size-20 md:size-10 rounded-full"
+                className="lg:size-20 md:size-10  rounded-full"
                 src="/hrm-logo.jpg"
                 alt="logo"
                 width={74}
@@ -115,7 +115,7 @@ const Navbar = () => {
                 <h2
                   className={`hover:text-white hover:bg-black hover:rounded-md dark:hover:bg-white dark:hover:text-black p-3 ${
                     pathname === item.path
-                      ? "text-white bg-black rounded-md hover:rounded-xl dark:bg-white dark:text-black dark:rounded-md"
+                      ? "text-white bg-black rounded-md hover:rounded-xl dark:bg-white dark:text-black dark:rounded-md dark:hover:rounded-xl"
                       : ""
                   }`}
                 >
@@ -132,7 +132,7 @@ const Navbar = () => {
               </Button>
             </Link>
             <Link href="/">
-              <Button>
+              <Button onClick={(e)=>alert('login page will be shown')}>
                 <CircleUserRound size={40} />
                 Login
               </Button>

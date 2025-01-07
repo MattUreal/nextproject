@@ -10,7 +10,7 @@ const Contact = () => {
   return (
     <div className='absolute w-full '>
       <Navbar/>
-      <div className='m-4  flex items-center justify-center'>
+      <div className='mt-36  flex items-center '>
         {/* <ContactForm/> */}
         <ContactForm/>
         

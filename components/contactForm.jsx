@@ -38,7 +38,7 @@ const ContactForm=()=> {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen w-2/4">
+    <div className="flex justify-center items-center w-full mt-4 mb-12">
       <Card className="w-full max-w-md shadow-lg">
         <CardHeader>
           <CardTitle>Contact Us</CardTitle>

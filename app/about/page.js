@@ -30,13 +30,13 @@ export default function About() {
         <section className="ml:mx-48 md:mx-28 sm:mx-12 m-3 border p-4 rounded shadow">
           <h1 className="text-3xl font-bold mb-4">What We Offer</h1>
           <p className="text-lg mb-6">
-            Job Posting Made Easy: Post job openings across multiple platforms
-            with just one click. Customize job listings to highlight your unique
+            Job Posting Made Easy: Post job openings 
+            with just one click. Customize job listings to highlight a unique
             brand and attract the best candidates.
           </p>
           <p className="text-lg mb-6">
             Streamlined Applicant Tracking: Our advanced ATS (Applicant Tracking
-            System) allows you to sort, filter, and review applications
+            System) allows to sort, filter, and review applications
             efficiently. Focus on finding the right talent while saving time and
             resources.
           </p>
@@ -45,7 +45,7 @@ export default function About() {
             attendance, and performance reviews – all in one place.
           </p>
           <p className="text-lg mb-6">
-            Analytics and Insights: Use data-driven insights to improve your
+            Analytics and Insights: Use data-driven insights to improve the
             hiring process, monitor employee performance, and make informed
             decisions about workforce management.
           </p>

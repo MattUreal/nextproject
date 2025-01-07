@@ -2,12 +2,12 @@ import React from "react";
 import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
-import { StickyNote, Upload } from "lucide-react";
+import { StickyNote, Upload, UserRound } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export default function HomePage() {
-  const teams =[
+  const team =[
     {name: "Michael Dereje", imgPath:'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80'},
     {name: "Milckyas Belay", imgPath:'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80'},
     {name: "Misle Tsegaye", imgPath:'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80'},
@@ -19,7 +19,7 @@ export default function HomePage() {
       <Navbar/>
 
       {/* Main Content */}
-      <main className="mt-40 p-8 text-center">
+      <main className="mt-36 p-8 text-center">
         <h1 className="text-3xl font-bold mb-4">Welcome to the HRM System</h1>
         <p className="text-lg mb-6">
           This user-friendly platform provides a comprehensive suite of HR tools
@@ -59,7 +59,7 @@ export default function HomePage() {
               <p className="mt-2">
                 {" "}
                 Process payroll accurately and efficiently, manage employee
-                benefits, and ensure compliance with all relevant regulations.
+                benefits.
               </p>
             </div>
             <div className="border p-4 rounded shadow">
@@ -74,7 +74,7 @@ export default function HomePage() {
               <h3 className="text-xl font-bold">Reporting & Analytics:</h3>
               <p className="mt-2">
                 {" "}
-                Gain valuable insights into your workforce with customizable
+                Gain valuable insights into the workforce with 
                 reports and dashboards.
               </p>
             </div>
@@ -123,20 +123,21 @@ export default function HomePage() {
             role="list"
             className="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2"
           >
-            {teams.map((item)=>(
+            {team.map((item)=>(
               <li>
               <div className="flex items-center gap-x-6">
-                <img
+                {/* <img
                   className="size-16 rounded-full"
-                  src={item.imgPath}
+                  src=''
                   alt="photo"
-                />
+                /> */}
+                <UserRound size={48}/>
                 <div>
-                  <h3 className="text-base/7 font-semibold tracking-tight text-gray-900">
+                  <h3 className="text-base/7 font-semibold tracking-tight ">
                     {item.name}
                   </h3>
                   <p className="text-sm/6 font-semibold text-indigo-600">
-                    Co-Founder / CEO
+                    Full Stack Developer
                   </p>
                 </div>
               </div>
