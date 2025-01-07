@@ -32,7 +32,7 @@ const ApplicationForm = () => {
     
         // Simulating an API call
         setTimeout(() => {
-          alert("Form submitted successfully!");
+          alert("Application successful!");
           setFormData({ name: "", email: "",phone: "", cv: "" });
           setIsSubmitting(false);
         }, 1000);
