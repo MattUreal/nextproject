@@ -5,6 +5,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
 const Offerings = () => {
+  {/*Sample List of job*/}
     const jobs = [
         { id: 1, title: 'Software Engineer', location: 'Remote', description: 'Develop and maintain web applications.' },
         { id: 2, title: 'Product Manager', location: 'New York, NY', description: 'Lead product development and strategy.' },
@@ -20,7 +21,7 @@ const Offerings = () => {
     <div className='absolute w-full' >
          {/* Navigation Bar */}
       <Navbar />
-      <div className="mt-36 p-8 text-center">
+      <div className="mt-40 p-8 text-center">
          {/* List of Jobs */}
           <section className="mt-4">
           <h2 className="text-2xl font-semibold mb-4">Available Jobs</h2>

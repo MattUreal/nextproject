@@ -10,9 +10,9 @@ export default function About() {
       <Navbar />
 
       {/* Main Content */}
-      <main className="mt-36 p-8 text-center">
-        <section className="ml:mx-48 md:mx-28 sm:mx-12">
-          <h1 className="text-3xl font-bold mb-4">About Us</h1>
+      <main className="mt-40 p-8 text-center">
+        <section className="ml:mx-48 md:mx-28 sm:mx-12 m-3 border p-4 rounded shadow">
+          <h1 className="text-3xl font-bold mb-4">About</h1>
           <p className="text-lg mb-6">
             Welcome to the HRM System, the ultimate solution for seamless job
             posting and integrated Human Resource Management (HRM). We
@@ -26,7 +26,7 @@ export default function About() {
           </p>
         </section>
 
-        <section className="ml:mx-48 md:mx-28 sm:mx-12">
+        <section className="ml:mx-48 md:mx-28 sm:mx-12 m-3 border p-4 rounded shadow">
           <h1 className="text-3xl font-bold mb-4">What We Offer</h1>
           <p className="text-lg mb-6">
             Job Posting Made Easy: Post job openings across multiple platforms
@@ -50,7 +50,7 @@ export default function About() {
           </p>
         </section>
         
-        <section className="ml:mx-48 md:mx-28 sm:mx-12">
+        <section className="ml:mx-48 md:mx-28 sm:mx-12 m-3 border p-4 rounded shadow">
           <h1 className="text-3xl font-bold mb-4">Our Mission</h1>
           <p className="text-lg mb-6">
             Our mission is to transform how businesses manage their talent and

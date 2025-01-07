@@ -6,13 +6,19 @@ import { Button } from "@/components/ui/button";
 import { StickyNote, Upload } from "lucide-react";
 
 export default function HomePage() {
+  const teams =[
+    {name: "Michael Dereje", imgPath:'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80'},
+    {name: "Milckyas Belay", imgPath:'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80'},
+    {name: "Misle Tsegaye", imgPath:'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80'},
+    {name: "Matiwos Maru", imgPath:'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80'}
+  ]
   return (
     <div className="absolute w-full">
       {/* Navigation Bar */}
       <Navbar />
 
       {/* Main Content */}
-      <main className="mt-36 p-8 text-center">
+      <main className="mt-40 p-8 text-center">
         <h1 className="text-3xl font-bold mb-4">Welcome to the HRM System</h1>
         <p className="text-lg mb-6">
           This user-friendly platform provides a comprehensive suite of HR tools
@@ -77,7 +83,7 @@ export default function HomePage() {
         <div className="flex items-center justify-center border p-4 w-3/4 mt-4 rounded shadow">
           <div>
             <h1 className="text-3xl font-bold mb-4">Get Started Today</h1>
-            <p className=" flex justify-between m-4">
+            {/* <p className=" flex justify-between m-4">
               Employers:{" "}
               <Link href="/">
                 <Button variant="outline">
@@ -85,7 +91,7 @@ export default function HomePage() {
                   Post jobs
                 </Button>
               </Link>
-            </p>
+            </p> */}
             <p className="">
               Job Seekers:{" "}
               <Link href="/">
@@ -98,10 +104,9 @@ export default function HomePage() {
           </div>
         </div>
         </section>
-        
-      </main>
 
-      <div className=" py-24 sm:py-32">
+        <section>
+        <div className=" py-24 sm:py-32">
         <div className="mx-auto grid max-w-7xl gap-20 px-6 lg:px-8 xl:grid-cols-3">
           <div className="max-w-xl">
             <h2 className="text-pretty text-3xl font-semibold tracking-tight  sm:text-4xl">
@@ -117,7 +122,26 @@ export default function HomePage() {
             role="list"
             className="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2"
           >
-            <li>
+            {teams.map((item)=>(
+              <li>
+              <div className="flex items-center gap-x-6">
+                <img
+                  className="size-16 rounded-full"
+                  src={item.imgPath}
+                  alt="photo"
+                />
+                <div>
+                  <h3 className="text-base/7 font-semibold tracking-tight text-gray-900">
+                    {item.name}
+                  </h3>
+                  <p className="text-sm/6 font-semibold text-indigo-600">
+                    Co-Founder / CEO
+                  </p>
+                </div>
+              </div>
+            </li>
+            ))}
+            {/* <li>
               <div className="flex items-center gap-x-6">
                 <img
                   className="size-16 rounded-full"
@@ -133,62 +157,17 @@ export default function HomePage() {
                   </p>
                 </div>
               </div>
-            </li>
+            </li> */}
 
-            <li>
-              <div className="flex items-center gap-x-6">
-                <img
-                  className="size-16 rounded-full"
-                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                  alt="photo"
-                />
-                <div>
-                  <h3 className="text-base/7 font-semibold tracking-tight text-gray-900">
-                    Leslie Alexander
-                  </h3>
-                  <p className="text-sm/6 font-semibold text-indigo-600">
-                    Co-Founder / CEO
-                  </p>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div className="flex items-center gap-x-6">
-                <img
-                  className="size-16 rounded-full"
-                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                  alt="photo"
-                />
-                <div>
-                  <h3 className="text-base/7 font-semibold tracking-tight text-gray-900">
-                    Leslie Alexander
-                  </h3>
-                  <p className="text-sm/6 font-semibold text-indigo-600">
-                    Co-Founder / CEO
-                  </p>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div className="flex items-center gap-x-6">
-                <img
-                  className="size-16 rounded-full"
-                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                  alt="photo"
-                />
-                <div>
-                  <h3 className="text-base/7 font-semibold tracking-tight text-gray-900">
-                    Leslie Alexander
-                  </h3>
-                  <p className="text-sm/6 font-semibold text-indigo-600">
-                    Co-Founder / CEO
-                  </p>
-                </div>
-              </div>
-            </li>
+            
           </ul>
         </div>
       </div>
+        </section>
+        
+      </main>
+
+      
 
       {/* Footer */}
       <Footer />

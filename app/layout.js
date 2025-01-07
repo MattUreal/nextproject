@@ -1,4 +1,4 @@
-import Head from 'next/head';
+
 import localFont from "next/font/local";
 import "./globals.css";
 import { icons } from 'lucide-react';
