@@ -95,7 +95,7 @@ export default function HomePage() {
             </p> */}
             <p className="">
               Job Seekers:{" "}
-              <Link href="/">
+              <Link href="/application">
                 <Button variant="outline">
                   <Upload />
                   Apply for a job

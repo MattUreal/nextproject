@@ -125,7 +125,7 @@ const Navbar = () => {
             ))}
           </div>
           <div className="hidden md:flex md:space-x-4  ">
-            <Link href="/">
+            <Link href="/application">
               <Button variant="outline">
                 <Upload />
                 Upload Resume
@@ -164,14 +164,14 @@ const Navbar = () => {
               </Link>
             ))}
             <div className="flex flex-col items-center space-y-2 right-0">
-              <Link href="/">
+              <Link href="/application">
                 <Button variant="outline">
                   <Upload />
                   Upload Resume
                 </Button>
               </Link>
               <Link href="/">
-                <Button>
+                <Button onClick={(e)=>alert('login page will be shown')}>
                   <CircleUserRound size={20} />
                   Login
                 </Button>

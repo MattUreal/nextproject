@@ -31,7 +31,7 @@ const ContactForm=()=> {
 
     // Simulating an API call
     setTimeout(() => {
-      alert("Form submitted successfully!");
+      alert("Message Sent successfully!");
       setFormData({ name: "", email: "", message: "" });
       setIsSubmitting(false);
     }, 1000);
