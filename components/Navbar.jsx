@@ -1,53 +1,60 @@
-'use client'
+"use client";
 
 import React from "react";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { useRouter } from 'next/navigation';
+import { usePathname, useRouter } from "next/navigation";
 
-import { Button } from "@/components/ui/button";
-import { CircleUserRound,Upload,Sun,Moon } from 'lucide-react';
+import { Button } from "./ui/button";
+import { CircleUserRound, Upload, Sun, Moon } from "lucide-react";
 
-const Navbar =()=>{
+const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
   const router = useRouter();
+  const pathname = usePathname();
 
   useEffect(() => {
-    const storedTheme = localStorage.getItem('theme');
+    const storedTheme = localStorage.getItem("theme");
     if (storedTheme) {
-      setIsDarkMode(storedTheme === 'dark');
-      document.documentElement.classList.toggle('dark', storedTheme === 'dark');
+      setIsDarkMode(storedTheme === "dark");
+      document.documentElement.classList.toggle("dark", storedTheme === "dark");
     }
   }, []);
 
   const toggleTheme = () => {
-    const newTheme = isDarkMode ? 'light' : 'dark';
+    const newTheme = isDarkMode ? "light" : "dark";
     setIsDarkMode(!isDarkMode);
-    localStorage.setItem('theme', newTheme);
-    document.documentElement.classList.toggle('dark', newTheme === 'dark');
+    localStorage.setItem("theme", newTheme);
+    document.documentElement.classList.toggle("dark", newTheme === "dark");
   };
 
   const navItems = [
-    { path: '/homepage', label: 'Home' },
-    { path: '/about', label: 'About' },
-    { path: '/offerings', label: 'Services' },
-    { path: '/contact', label: 'Contact' },
+    { path: "/", label: "Home" },
+    { path: "/offerings", label: "Job Offerings" },
+    { path: "/about", label: "About" },
+    { path: "/contact", label: "Contact" },
   ];
 
-  const isActive = (path) => router.pathname === path;
+  
 
-    return (
-      <nav className=" fixed w-full  text-black border-b-1 dark:bg-background bg-white border-cyan-50 p-4 rounded shadow dark:text-gray-50">
+  return (
+    <nav className=" fixed w-full  text-black border-b-1 dark:bg-background bg-white border-cyan-50 p-4 rounded shadow dark:text-gray-50">
       <div className=" mx-auto items-center px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between p-4">
           <div className="flex items-center">
             <Link href="/homepage">
-            <Image className="size-20 rounded-full" src='/hrm-logo.jpg' alt="logo" width={74} height={29} />
+              <Image
+                className="lg:size-20 md:size-10  rounded-full"
+                src="/hrm-logo.jpg"
+                alt="logo"
+                width={74}
+                height={29}
+              />
             </Link>
           </div>
-          
+
           <div className="-mr-2 flex md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -89,8 +96,8 @@ const Navbar =()=>{
               )}
             </button>
           </div>
-          <div className="hidden md:flex md:items-center md:space-x-8">
-            <Link href="/">
+          <div className="hidden md:flex md:items-center md:space-x-4">
+            {/* <Link href="/">
               <h2 className={`hover:text-white hover:bg-black hover:rounded-xl dark:hover:bg-white dark:hover:text-black p-4 ${isActive('/about') ? 'bg-green-700 dark:bg-gray-600'  : ''}`}>Home</h2>
             </Link>
             <Link href="/offerings">
@@ -102,68 +109,85 @@ const Navbar =()=>{
             
             <Link href="/contact">
               <h2 className={`hover:text-white hover:bg-black hover:rounded-xl  dark:hover:bg-white dark:hover:text-black p-4 ${isActive('/contact') ? 'bg-green-700 dark:bg-gray-600' : ''}`}>Contact</h2>
-            </Link>
-             {/* {navItems.map((item) => (
+            </Link> */}
+            {navItems.map((item) => (
               <Link href={item.path} key={item.path}>
                 <h2
-                  className={`hover:text-gray-200 dark:hover:text-gray-400 px-3 py-2 rounded-md ${
-                    router.pathname === item.path
-                      ? 'bg-blue-700 dark:bg-gray-600'
-                      : ''
+                  className={`hover:text-white hover:bg-black hover:rounded-md dark:hover:bg-white dark:hover:text-black p-3 ${
+                    pathname === item.path
+                      ? "text-white bg-black rounded-md hover:rounded-xl dark:bg-white dark:text-black dark:rounded-md dark:hover:rounded-xl"
+                      : ""
                   }`}
                 >
                   {item.label}
                 </h2>
               </Link>
-            ))} */}
-            
+            ))}
           </div>
-            <div className="hidden md:flex md:space-x-4  ">
-              <Link href="/"><Button variant="outline"><Upload/>Upload Resume</Button></Link>
-              <Link href="/"><Button><CircleUserRound size={40}/>Login</Button></Link>
-              <button
+          <div className="hidden md:flex md:space-x-4  ">
+            <Link href="/application">
+              <Button variant="outline">
+                <Upload />
+                Upload Resume
+              </Button>
+            </Link>
+            <Link href="/">
+              <Button onClick={(e)=>alert('login page will be shown')}>
+                <CircleUserRound size={40} />
+                Login
+              </Button>
+            </Link>
+            <button
               onClick={toggleTheme}
               className="p-2 rounded-md outline-offset-1 dark:outline-white"
-              >
-              {isDarkMode ? <Sun/> : <Moon className="dark:bg-black"/>}
-              </button>
-            </div>
-            
+            >
+              {isDarkMode ? <Sun /> : <Moon className="dark:bg-black" />}
+            </button>
+          </div>
         </div>
       </div>
 
       {isOpen && (
         <div className="md:hidden ">
           <div className="px-2 pt-5 pb-3 space-y-5 sm:px-3 flex flex-col items-center mr-0">
-          <Link href="/">
-              <h2 className="block text-base font-medium p-4 hover:rounded-xl hover:text-white hover:bg-black  dark:hover:bg-white dark:hover:text-black">Home</h2>
-            </Link>
-            <Link href="/offerings">
-              <h2 className="block text-base font-medium p-4 hover:rounded-xl  hover:text-white hover:bg-black  dark:hover:bg-white dark:hover:text-black">Job Offerings</h2>
-            </Link>
-            <Link href="/about">
-              <h2 className="block text-base font-medium p-4 hover:rounded-xl  hover:text-white hover:bg-black  dark:hover:bg-white dark:hover:text-black">About</h2>
-            </Link>
-            
-            <Link href="/contact">
-              <h2 className="block text-base font-medium p-4 hover:rounded-xl  hover:text-white hover:bg-black dark:hover:bg-white dark:hover:text-black">Contact</h2>
-            </Link>
-             <div className="flex flex-col items-center space-y-2 right-0">
-            <Link href="/" ><Button variant="outline"><Upload/>Upload Resume</Button></Link>
-            <Link href="/"><Button ><CircleUserRound size={20}/>Login</Button></Link>     
-              </div>
-              <button
+            {navItems.map((item) => (
+              <Link href={item.path} key={item.path}>
+                <h2
+                  className={`hover:text-white hover:bg-black hover:rounded-md dark:hover:bg-white dark:hover:text-black p-4 ${
+                    pathname === item.path
+                      ? "text-white bg-black rounded-md hover:rounded-xl dark:bg-white dark:text-black dark:rounded-md"
+                      : ""
+                  }`}
+                >
+                  {item.label}
+                </h2>
+              </Link>
+            ))}
+            <div className="flex flex-col items-center space-y-2 right-0">
+              <Link href="/application">
+                <Button variant="outline">
+                  <Upload />
+                  Upload Resume
+                </Button>
+              </Link>
+              <Link href="/">
+                <Button onClick={(e)=>alert('login page will be shown')}>
+                  <CircleUserRound size={20} />
+                  Login
+                </Button>
+              </Link>
+            </div>
+            <button
               onClick={toggleTheme}
               className="p-2 rounded-md outline-offset-1 dark:outline-white"
-              >
-              {isDarkMode ? <Sun/> : <Moon className="dark:bg-black"/>}
+            >
+              {isDarkMode ? <Sun /> : <Moon className="dark:bg-black" />}
             </button>
           </div>
-         
         </div>
       )}
     </nav>
-    )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
